@@ -1,0 +1,33 @@
+:root {
+	lightHover:'#fcf4ff';
+	darkHover:'#f1f5f9';
+}
+
+.font-Outfit {
+	font-family: "Outfit", "sans-serif";
+}
+
+.font-Ovo {
+	font-family: "Ovo", "serfi";
+}
+
+.auto {
+	grid-template-columns: "repeat(auto-fit, minmax(200px, 1fr))";
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.spin_slow {
+	animation: spin 6s linear infinite;
+}
+
+.lightHover {
+	color: '#fc'
+}
