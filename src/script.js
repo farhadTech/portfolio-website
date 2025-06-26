@@ -23,3 +23,23 @@ window.addEventListener('scroll',
     }
   }
 )
+
+// light mode and dark mode
+// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+document.documentElement.classList.toggle(
+  "dark",
+  localStorage.theme === "dark" ||
+    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
+);
+
+
+function toggleTheme() {
+
+  document.documentElement.classList.contains('dark');
+  if (document.documentElement.classList.contains('dark')) {
+    localStorage.theme = 'dark';
+  }
+  else {
+    localStorage.theme = 'light';
+  }
+}
